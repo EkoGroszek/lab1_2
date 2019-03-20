@@ -1,6 +1,8 @@
 package pl.com.bottega.ecommerce.sales.domain.invoicing;
 
-public interface TaxCalculator {
+import pl.com.bottega.ecommerce.sharedkernel.Money;
 
+public interface TaxCalculator {
+    Money calculate();
 
 }
