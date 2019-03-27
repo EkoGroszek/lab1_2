@@ -53,6 +53,16 @@ public class BunchOfTests {
         Money testValue = new Money(a + b);
 
         Assert.assertThat(valueA.add(valueB), is(testValue));
+    }
 
+    @Test public void testSubstract() {
+        double value = 30;
+        double substractor = 10;
+
+        Money testValue = new Money(value);
+        Money substractorValue = new Money(substractor);
+        Money result = new Money(value - substractor);
+
+        Assert.assertThat(testValue.subtract(substractorValue), is(result));
     }
 }
