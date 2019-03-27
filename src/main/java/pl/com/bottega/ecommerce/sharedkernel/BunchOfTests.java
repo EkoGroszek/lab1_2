@@ -43,4 +43,16 @@ public class BunchOfTests {
 
         Assert.assertThat(money.multiplyBy(multiplier), is(testValue));
     }
+
+    @Test public void testAdd() {
+        double a = 20;
+        double b = 30;
+        Money valueA = new Money(a);
+        Money valueB = new Money(b);
+
+        Money testValue = new Money(a + b);
+
+        Assert.assertThat(valueA.add(valueB), is(testValue));
+
+    }
 }
