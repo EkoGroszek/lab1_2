@@ -4,7 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.util.Currency;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 
 public class BunchOfTests {
@@ -65,4 +67,11 @@ public class BunchOfTests {
 
         Assert.assertThat(testValue.subtract(substractorValue), is(result));
     }
+
+    @Test public void testGetCurrency(){
+        Money first = new Money(4.5, "EUR");
+        //Money second = new Money(7.5, "PLN");
+        Assert.assertThat(first.getCurrency(), instanceOf(Currency.class));
+    }
+
 }
